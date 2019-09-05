@@ -1,4 +1,4 @@
-## Day 1
+# Day 1
     use git bash for linx work.
     mkdir is used to create new directories.
     cd is used to switch between directories.
