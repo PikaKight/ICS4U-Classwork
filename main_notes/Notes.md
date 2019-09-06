@@ -12,3 +12,4 @@
     . is current directory, .. is parent directory\
     -r lets u interact with the whole directory
     cp copy, rm remove, mv move
+    tree lets you see the files in current directory like a tree
