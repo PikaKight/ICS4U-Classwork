@@ -1,1 +1,2 @@
-Hello
+Hello, this is a practice thing for comand line
+Hello World
