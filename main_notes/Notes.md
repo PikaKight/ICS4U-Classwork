@@ -13,3 +13,7 @@
     -r lets u interact with the whole directory
     cp copy, rm remove, mv move, cat lets you see into the file  
     tree lets you see the files in current directory like a tree
+
+# Tree
+
+    tree.com //a //f
