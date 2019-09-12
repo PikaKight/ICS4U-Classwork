@@ -1,4 +1,4 @@
-Student = dict()
+Student = dict() # creates an empty dictionary
 
 start = True
 
@@ -9,11 +9,13 @@ while start:
     
     Student[F_name] = L_name
 
-    ask = input("Do you want to continue (Y/N) ")
+    print (Student[F_name]) #returns the value
+
+    ask = input("Do you want to continue (Y/N)")
 
     if ask == "Y":
         continue
     else: 
         start = False
 
-print (Student)
+print (Student) #returns the dictionary 
