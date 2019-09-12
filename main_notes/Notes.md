@@ -17,5 +17,3 @@
 # Tree
 
     tree.com //a //f
-
-# Dictiona
