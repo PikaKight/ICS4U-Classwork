@@ -19,3 +19,6 @@
     tree.com //a //f
 
 # Test on Monday or Tuesday
+
+    will give a regular problem, i.e. making a function to do avg, Look at function annotation.
+    Practice writing functions with proper annotation. 
