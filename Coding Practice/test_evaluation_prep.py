@@ -1,4 +1,4 @@
 from evaluation_prep import *
 
-def test_take_two():
-    assert take_two(5,6) == 11
+def test_sum_of_two():
+    assert sum_of_two(5,6) == 11
