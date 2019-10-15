@@ -19,7 +19,6 @@ class Person():
         self.strength = strength
         self.health_points = 100
         
-
     def __str__(self):
        return f"""
        {self.name}
@@ -27,12 +26,20 @@ class Person():
        {self.introduce()}
        """
     
-
     def introduce(self):
-        return ("Hello, my name is {}".format(self.name))
+        return (f"Hello, my name is {self.name}")
+    
+    def punch(self, Person):
+        Person.health_points -= 10
+        print(f"{Person.name}'s health is {Person.health_points}")
 
-pikakight = Person("PikaKight", 161, 243)
-mars = Person("Mars", 161, 243)
+pikakight = Person("PikaKight", 161, 1)
+mars = Person("Mars", 161, 1)
 
 print(pikakight)
 print(mars)
+
+pikakight.punch(mars)
+mars.punch(pikakight)
+pikakight.punch(pikakight)
+mars.punch(mars)
