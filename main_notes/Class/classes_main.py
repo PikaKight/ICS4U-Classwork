@@ -5,7 +5,8 @@ def main():
     print(fluffy, "\n", fluffy.bark())
     
     apple = Food("apple", 1.50, 95)
-    apple.set_nutrition("hello")
+    apple.set_nutrition(50)
+    print(apple.get_nutrition())
     
     print(fluffy.eat(apple))
     print(fluffy)

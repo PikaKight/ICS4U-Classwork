@@ -3,13 +3,15 @@ class Food:
     def __init__(self, name:str, cost:int, nutrition:int):
         self.name = name
         self.cost = cost
-        self.nutrition = nutrition
+        self._nutrition = nutrition
 
     def set_nutrition(self, value):
         if type(value) != int:
             raise TypeError("Nutrition can only be of type int.")
-        self.nutrition = value
-        
+        self._nutrition = value
+    
+    def get_nutrition(self):
+        return self._nutrition
 
 class Dog:
 
@@ -25,5 +27,5 @@ class Dog:
         return("RUFF RUFF!")
 
     def eat(self,Food):
-            self.happiness += (0.10 * Food.nutrition)
+            self.happiness += (0.10 * Food._nutrition)
             return (f"{self.name}, eats {Food.name} for {self.happiness} happiness.")
