@@ -20,10 +20,15 @@ class Dog:
 
     def eat(self,Food):
             self.happiness += (0.10 * Food.nutrition)
+            return (f"{self.name}, eats {Food.name} for {self.happiness} happiness.")
 
-fluffy = Dog("Husky", "Fluffy")
-apple = Food("apple", 1.50, 95)
+def main():
+    fluffy = Dog("Husky", "Fluffy")
+    apple = Food("apple", 1.50, 95)
 
-print(fluffy, "\n", fluffy.bark())
-fluffy.eat(apple)
-print(fluffy)
+    print(fluffy, "\n", fluffy.bark())
+    print(fluffy.eat(apple))
+    print(fluffy)
+
+if __name__ == "__main__":
+    main()

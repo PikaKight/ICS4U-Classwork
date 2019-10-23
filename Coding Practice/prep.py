@@ -21,12 +21,17 @@ class Dog:
 
     def eat(self,Food):
         self.happiness += (0.10 * Food.nutrition)
+        return (f"{self.name}, eats {Food.name} for {self.happiness} happiness.")
 
     def bark(self):
         return("RUFF RUFF!")
 
-food = Food("apple", 1, 50)
+def main():
+    food = Food("apple", 1, 50)
 
-dog = Dog("Husky", "Fenrir", 100, food)
+    dog = Dog("Husky", "Fenrir", 100, food)
 
-print(dog, dog.bark())
+    print(dog, dog.bark())
+
+if __name__ == "__main__":
+    main()
