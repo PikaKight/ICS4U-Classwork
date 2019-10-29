@@ -21,12 +21,16 @@ from typing import *
 
 class Pizza:
     
+    pizza_num = 1
+
     def __init__(self, name: str, toppings: List[str]):
         self.name = name
         self.toppings = toppings
+        self.order_number = Pizza.pizza_num
+        Pizza.pizza_num += 1
 
     def __str__(self) -> str:
-        return f"{self.name}, toppings: {self.toppings}"
+        return f"Order Number: {self.order_number} {self.name}, toppings: {self.toppings}"
 
 def main():
     
@@ -34,7 +38,10 @@ def main():
 
     p2 = Pizza("Hawaiian", ["Mozzarella", "White Cheddar", "Beacon", "Ham", "Pineapple" ])
 
+    p3 = Pizza("Cheese", ["Mozzarella", "White Cheddar"])
+
     print(p1)
     print(p2)
+    print(p3)
 
 main()
