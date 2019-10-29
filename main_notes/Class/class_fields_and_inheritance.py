@@ -33,15 +33,15 @@ class Pizza:
         return f"Order Number: {self.order_number} {self.name}, toppings: {self.toppings}"
    
     @classmethod
-    def pepperoni(cls):
+    def pepperoni(cls) -> "Pizza":
         return cls("Pepperoni", ["Mozzarella", "White Cheddar", "Pepperonis"])
    
     @classmethod
-    def hawaiian(cls):
+    def hawaiian(cls) -> "Pizza":
         return cls("Hawaiian", ["Mozzarella", "White Cheddar", "Beacon", "Ham", "Pineapple" ])
     
     @classmethod 
-    def cheese(cls):
+    def cheese(cls) -> "Pizza":
         return cls("Cheese", ["Mozzarella", "White Cheddar"])
         
 
