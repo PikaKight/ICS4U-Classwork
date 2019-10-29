@@ -1,8 +1,6 @@
 """
 - class field (variable)
 - class method
-
-- Inheritance
 """
 
 """
