@@ -21,7 +21,7 @@ from typing import *
 
 class Pizza:
     
-    pizza_num = 1
+    pizza_num = 1 #Class Variable
 
     def __init__(self, name: str, toppings: List[str]):
         self.name = name
@@ -31,14 +31,27 @@ class Pizza:
 
     def __str__(self) -> str:
         return f"Order Number: {self.order_number} {self.name}, toppings: {self.toppings}"
+   
+    @classmethod
+    def pepperoni(cls):
+        return cls("Pepperoni", ["Mozzarella", "White Cheddar", "Pepperonis"])
+   
+    @classmethod
+    def hawaiian(cls):
+        return cls("Hawaiian", ["Mozzarella", "White Cheddar", "Beacon", "Ham", "Pineapple" ])
+    
+    @classmethod 
+    def cheese(cls):
+        return cls("Cheese", ["Mozzarella", "White Cheddar"])
+        
 
 def main():
     
-    p1 = Pizza("Extra Chesse Pepperoni", ["Mozzarella", "White Cheddar", "Pepperonis"])
+    p1 = Pizza.pepperoni()
 
-    p2 = Pizza("Hawaiian", ["Mozzarella", "White Cheddar", "Beacon", "Ham", "Pineapple" ])
+    p2 = Pizza.hawaiian()
 
-    p3 = Pizza("Cheese", ["Mozzarella", "White Cheddar"])
+    p3 = Pizza.cheese()
 
     print(p1)
     print(p2)
