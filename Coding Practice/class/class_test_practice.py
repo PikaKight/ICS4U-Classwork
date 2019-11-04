@@ -16,16 +16,26 @@ class Person:
         return self._age
 
 class Teacher(Person):
-    def __init__(self, OCT_Pin: int, school: str, classes: List[Class]):
+    def __init__(self, email_k12: str, OCT_Pin: int, school: str, classes: List[Class]):
         self._OCT_Pin = OCT_Pin
         self._school = school
         self._classes = classes
-    def greet(self):
+
+    def greet(self) -> void:
         return f"Hello, I am {self._first_name} {self._last_name} and I am a teacher at {self._school}"
 
+class Class:
+    def __init__(self, subject: str, students: List[Student]):
+        pass
+
+class Student(Person):
+    def __init__(self, email_k12: str,student_number: int):
+        self.email_k12 = email_k12
+        self.sn = student_number
+    
 def main():
     p = Person("Marcus", "Tuen Muk", date(2002, 10, 19))
-    print(p.get_age())
+    print("\n", p.get_age(), "\n", p.greet())
     
 
 if __name__ == "__main__":
