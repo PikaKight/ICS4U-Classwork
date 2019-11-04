@@ -15,6 +15,16 @@ class Person:
         self._age = today.year - self._dob.year - ((today.month, today.day) < (self._dob.month, self._dob.day))
         return self._age
 
-p = Person("Marcus", "Tuen Muk", date(2002, 10, 19))
-print(p.get_age())
+class Teacher(Person):
+    def __init__(self, OCT_Pin: int, school: str, classes: List[Class]):
+        self.OCT_Pin = OCT_Pin
+        self.school = school
+        self.classes = classes
+    
+def main():
+    p = Person("Marcus", "Tuen Muk", date(2002, 10, 19))
+    print(p.get_age())
+
+if __name__ == "__main__":
+    main()
 
