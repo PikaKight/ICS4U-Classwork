@@ -17,13 +17,16 @@ class Person:
 
 class Teacher(Person):
     def __init__(self, OCT_Pin: int, school: str, classes: List[Class]):
-        self.OCT_Pin = OCT_Pin
-        self.school = school
-        self.classes = classes
-    
+        self._OCT_Pin = OCT_Pin
+        self._school = school
+        self._classes = classes
+    def greet(self):
+        return f"Hello, I am {self._first_name} {self._last_name} and I am a teacher at {self._school}"
+
 def main():
     p = Person("Marcus", "Tuen Muk", date(2002, 10, 19))
     print(p.get_age())
+    
 
 if __name__ == "__main__":
     main()
