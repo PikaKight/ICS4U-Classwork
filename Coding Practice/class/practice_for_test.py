@@ -46,7 +46,6 @@ class Person:
 
 p = Person("Peter", 45, 235)
 p2 = Person("Sally", 42, 232)
-p3 = Person("Marcus", 17, 243)
 p.age = "hello"
 print(p.get_age())
 p.set_name("King")
@@ -65,4 +64,3 @@ class Student(Person):
     def __str__(self) -> str:
         return f"{self._name} is a student of {self.school}."
 
-print (p3)
