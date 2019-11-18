@@ -44,7 +44,7 @@ class Person:
     def get_age(self):
         return self._age
 
-p = Person("Peter", 45, 235)
+p = Person("Peter", 45, 200)
 p2 = Person("Sally", 42, 232)
 p.age = "hello"
 print(p.get_age())
