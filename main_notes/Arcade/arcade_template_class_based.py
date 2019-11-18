@@ -1,4 +1,4 @@
-import arcade
+import arcade, random
 
 WIDTH = 800
 HEIGHT = 600
@@ -15,13 +15,23 @@ class MyGame(arcade.Window):
 
     def setup(self):
         # Create your sprites and sprite lists here
-        pass
-
+        self.all_sprites = arcade.SpriteList()
+        for _ in range(100):
+            sprite = arcade.Sprite(filename="main_notes/Arcade/playerShip1_blue.png", 
+                                    center_x=random.randrange(WIDTH), 
+                                    center_y=random.randrange(HEIGHT), 
+                                    scale=0.5)
+            sprite.change_x = random.randint(-6, 6)
+            sprite.change_y = random.randint(-6, 6)
+            self.all_sprites.append(sprite)
+            
+        
+        
+     
     def on_draw(self):
         arcade.start_render()  # keep as first line
-
         # Draw everything below here.
-        arcade.draw_circle_filled(100, 100, 25, arcade.color.BLUE)
+        self.all_sprites.draw()
 
     def update(self, delta_time):
         """
@@ -29,20 +39,31 @@ class MyGame(arcade.Window):
         Normally, you'll call update() on the sprite lists that
         need it.
         """
-        pass
-
+        self.all_sprites.update()
+    
     def on_key_press(self, key, key_modifiers):
         """
         Called whenever a key on the keyboard is pressed.
         For a full list of keys, see:
         http://arcade.academy/arcade.key.html
         """
+        print (key, key_modifiers)
+        if key == arcade.key.D:
+            self.all_sprites.change_x = 1
+        if key == arcade.key.A:
+            self.all_sprites.change_x = -1
+        if key == arcade.key.W:
+            self.all_sprites.change_y = 1
+        if key == arcade.key.S:
+            self.all_sprites.change_y = -1
+
         pass
 
     def on_key_release(self, key, key_modifiers):
         """
         Called whenever the user lets off a previously pressed key.
         """
+        
         pass
 
     def on_mouse_motion(self, x, y, delta_x, delta_y):
