@@ -29,13 +29,13 @@ def binary_search(target:int, data: List) -> int:
 
     return -1
 
-DATASET_SIZE = 10**11
+DATASET_SIZE = 10**5
 NUMBER_OF_CALLS = 10000
-SEARCH_TARGET = DATASET_SIZE // 2
+SEARCH_TARGET = DATASET_SIZE * 0
 
 dataset = range(DATASET_SIZE)
 result_b = timeit.timeit(
-    "binary_search(SEARCH_TARGET, dataset)",
+    "linear_search(SEARCH_TARGET, dataset)",
     setup="import random",
     number=NUMBER_OF_CALLS,
     globals=globals())
